@@ -29,8 +29,6 @@ export class UserList implements OnInit {
   ngOnInit(): void {
     this.randomUserService.getRandomUsers().subscribe(data => {
       this.users = data;
-      console.log(this.users);
-      
     });
   }
 }
