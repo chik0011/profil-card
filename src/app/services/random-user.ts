@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, map, tap} from 'rxjs';
+import { Observable, map} from 'rxjs';
 import { environment } from '../../environments/environment.prod';
 
 @Injectable({
@@ -14,8 +14,7 @@ import { environment } from '../../environments/environment.prod';
     // Fetche a random user from the RandomUser API
     getRandomUser(): Observable<any> {
     return this.http.get<any>(this.apiUrl).pipe(
-      map(response => response.results[0]),
-      tap(user => console.log(user))  
+      map(response => response.results[0])
     );
   }
 }
