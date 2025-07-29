@@ -1,1 +1,20 @@
-<p>user-list works!</p>
+<table class="user-table">
+  <thead>
+    <tr>
+      <th>Picture</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Country</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users" [@fadeInUp]>
+      <td><img [src]="user.picture.thumbnail"/></td>
+      <td>{{ user.name.first }} {{ user.name.last }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.location.country }}</td>
+      <td>{{ user.registered.age }}</td>
+    </tr>
+  </tbody>
+</table>

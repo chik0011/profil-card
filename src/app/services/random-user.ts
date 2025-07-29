@@ -13,8 +13,15 @@ import { environment } from '../../environments/environment.prod';
 
     // Fetche a random user from the RandomUser API
     getRandomUser(): Observable<any> {
-    return this.http.get<any>(this.apiUrl).pipe(
-      map(response => response.results[0])
-    );
-  }
+      return this.http.get<any>(this.apiUrl).pipe(
+        map(response => response.results[0])
+      );
+    }
+
+    // Fetche a random users from the RandomUser API
+    getRandomUsers(): Observable<any[]> {
+      return this.http.get<any>(`${this.apiUrl}?results=5`).pipe(
+        map(response => response.results)
+      );
+    }
 }

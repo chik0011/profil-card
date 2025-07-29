@@ -1,0 +1,25 @@
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+
+  th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #D3D3D3;
+  }
+
+  th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+
+  tr:hover {
+    background-color: #f0f8ff;
+  }
+}
